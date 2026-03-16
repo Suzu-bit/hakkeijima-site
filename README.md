@@ -9,6 +9,7 @@
 ## 使用技術
 - HTML
 - CSS
+- JavaScript
 
 ## 特徴
 - カード型レイアウト
