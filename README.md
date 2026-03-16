@@ -10,6 +10,7 @@
 - HTML
 - CSS
 - JavaScript
+- Figma
 
 ## 特徴
 - カード型レイアウト
