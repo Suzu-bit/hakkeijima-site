@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 /* =========
-   Base
+  Base
 ========= */
 *,
 *::before,
@@ -28,7 +28,7 @@ img {
 }
 
 section {
-  scroll-margin-top: 100px; /* ヘッダーの高さ分 */
+  scroll-margin-top: 100px; 
 }
 
 
@@ -49,7 +49,7 @@ a {
 }
 
 /* =========
-   Header（固定）
+  Header（固定）
 ========= */
 header {
   position: fixed;
@@ -72,12 +72,12 @@ header {
 }
 
 header ul {
-  list-style: none;      /* ← ・を消す */
+  list-style: none;     
   margin: 0;
   padding: 0;
 
-  display: flex;         /* ← 横並び */
-  gap: 40px;             /* メニュー間の余白 */
+  display: flex;         
+  gap: 40px;            
   align-items: center;
 }
 
@@ -92,7 +92,6 @@ header ul li a{
   padding-bottom: 6px;
 }
 
-/* 下線（初期は非表示） */
 header ul li a::after{
   content: "";
   position: absolute;
@@ -104,12 +103,10 @@ header ul li a::after{
   transition: width 0.3s ease;
 }
 
-/* hoverで左右に伸びる */
 header ul li a:hover::after{
   width: 100%;
 }
 
-/* Home */
 header li.home a::after{
   background-color: #545454;
 }
@@ -130,7 +127,7 @@ header li.deepsea a::after{
 }
 
 /* =========
-   Video hero
+  Video hero
 ========= */
 main.video {
   width: 100%;
@@ -160,7 +157,7 @@ main.video p {
 }
 
 /* =========
-   Contents wrapper
+  Contents wrapper
 ========= */
 article.contents {
   width: 100%;
@@ -173,7 +170,7 @@ article.contents section {
 }
 
 /* =========
-   Section title
+  Section title
 ========= */
 .sea_title,
 .land_title,
@@ -208,8 +205,9 @@ article.contents section {
   margin: 0;
   font-size: 25px;
 }
+
 /* =========
-   Grid（海/陸/深海：4列カード）
+  Grid（海/陸/深海：4列カード）
 ========= */
 section.sea,
 section.land,
@@ -220,7 +218,6 @@ section.deepsea {
   align-items: start;
 }
 
-/* タイトルを全幅に */
 section.sea .sea_title,
 section.land .land_title,
 section.deepsea .deepsea_title {
@@ -228,13 +225,12 @@ section.deepsea .deepsea_title {
   margin-bottom: 8px;
 }
 
-/* カード */
 .sea_contents{
   border: 3px solid #00eeff;
   border-radius: var(--card-radius);
   overflow: hidden;
   background: var(--muted);
-  height: 480px;           /* ← 好きな高さに調整 */
+  height: 480px;           
   display: flex;
   flex-direction: column;
 }
@@ -244,7 +240,7 @@ section.deepsea .deepsea_title {
   border-radius: var(--card-radius);
   overflow: hidden;
   background: var(--muted);
-  height: 500px;           /* ← 好きな高さに調整 */
+  height: 500px;           
   display: flex;
   flex-direction: column;
 }
@@ -254,7 +250,7 @@ section.deepsea .deepsea_title {
   border-radius: var(--card-radius);
   overflow: hidden;
   background: var(--muted);
-  height: 410px;           /* ← 好きな高さに調整 */
+  height: 410px;           
   display: flex;
   flex-direction: column;
 }
@@ -283,12 +279,12 @@ section.deepsea .deepsea_title {
   margin: 0 12px 14px;
   font-size: 13px;
   color: #333;
-  flex-grow: 1;            /* ← ここが超重要 */
+  flex-grow: 1;            
   overflow: hidden; 
 }
 
 /* =========
-   Aquarium section（見出し＋説明行＋左右2カラム）
+  Aquarium section
 ========= */
 article.aquarium {
   padding: 10px var(--side) 100px;
@@ -329,7 +325,7 @@ article.aquarium hr {
 }
 
 /* =========
-   Footer（直線だけ）
+  Footer
 ========= */
 footer {
   position: relative;
@@ -385,19 +381,19 @@ footer li.home a {
 
 /* 海のいきもの */
 footer li.sea a {
-  border-color: #00eeff; /* 海っぽい青 */
+  border-color: #00eeff; 
   color: #000;
 }
 
 /* 陸のいきもの */
 footer li.land a {
-  border-color: #7cfc00; /* 陸っぽい緑 */
+  border-color: #7cfc00; 
   color: #000;
 }
 
 /* 深海のいきもの */
 footer li.deepsea a {
-  border-color: #4a00c0; /* 深海っぽい紫 */
+  border-color: #4a00c0; 
   color: #000;
 }
 
@@ -434,11 +430,7 @@ footer > p {
 
 
 /* =========================
-   Responsive CSS only
-   （style.css の一番下に追記）
-   - 文章は省略しない
-   - title下の空きすぎ/被りを修正
-   - 同じ行のカード高さを揃える
+  Responsive CSS
 ========================= */
 
 @media (max-width: 900px) {
@@ -490,7 +482,7 @@ footer > p {
     bottom: 0;
   }
 
-  /* nav をドロップダウン化（HTMLで ul を nav.header_nav で包む想定） */
+  /* nav をドロップダウン化 */
   .header_nav {
     position: absolute;
     left: 0;
@@ -523,7 +515,6 @@ footer > p {
     width: 100%;
   }
 
-  /* スマホはボタン風 */
   .header_nav li a {
     display: block;
     width: 100%;
@@ -534,19 +525,16 @@ footer > p {
     margin: 2% 0;
   }
 
-  /* 通常時：枠線色 */
   .header_nav li.home a { border-color: #545454; color: #000; }
   .header_nav li.sea a { border-color: #00eeff; color: #000; }
   .header_nav li.land a { border-color: #7cfc00; color: #000; }
   .header_nav li.deepsea a { border-color: #4a00c0; color: #000; }
 
-  /* ホバー時：文字色を枠線色へ */
   .header_nav li.home a:hover { color: #545454; }
   .header_nav li.sea a:hover { color: #00eeff; }
   .header_nav li.land a:hover { color: #7cfc00; }
   .header_nav li.deepsea a:hover { color: #4a00c0; }
 
-  /* 下線アニメがある場合はスマホでは消す（枠ボタンなので） */
   .header_nav ul li a::after {
     display: none;
   }
@@ -579,15 +567,13 @@ footer > p {
     padding: 0 2px;
   }
 
-  /* 文章がはみ出る場合の対策（必要ならON）
-     2列だと縦が長くなりがちなので、説明文だけスクロールにしてもOK */
   .sea_contents p,
   .land_contents p,
   .deepsea_contents p {
     overflow: auto;
   }
 
-  /* ===== Aquarium（縦並び） ===== */
+  /* ===== Aquarium ===== */
   article.aquarium {
     padding: 4% var(--side) 10%;
   }
@@ -619,7 +605,7 @@ footer > p {
     border-radius: 10px;
   }
 
-  /* ===== Footer（縦並び） ===== */
+  /* ===== Footer ===== */
   footer {
     height: auto;
     min-height: 60vw;
@@ -659,7 +645,6 @@ footer > p {
     font-size: 1rem;
   }
 
-  /* コピーライトは自然に一番下へ */
   footer > p {
     position: static;
     transform: none;
